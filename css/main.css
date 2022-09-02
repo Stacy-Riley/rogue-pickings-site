@@ -99,7 +99,7 @@ header nav ul li a{
 	flex-flow: column wrap;
 }
 
-.main-image {  /*third layer container for <img> tag */
+.main-image {  /*4th layer container for <img> tag */
 	display: flex;
 	justify-content: center;
 	align-items: center;
