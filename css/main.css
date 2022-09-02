@@ -1,0 +1,264 @@
+/***********************************************************/
+/*******************  MOBIL-FIRST  *************************/
+/***********************************************************/
+html {
+	font-size: 16px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: 1em;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+	color: black;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 1.875em;
+}
+
+h2 {
+	font-size: 1.125em;
+}
+
+h3 {
+	font-size: .75em;
+}
+
+p {
+	font-size: .875em;
+	line-height: 21px;
+    padding: 0 30px;
+}
+
+/*The widths are in a percentage!*/
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;   /*mobil set to column*/
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1 {
+	border-bottom: 3px solid #77a466;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 38px 0 20px 0;
+	margin: 0;
+	width: 90%;
+}
+
+header h1 span {
+	color: #77a466;
+}
+
+header nav ul {
+	margin: 16px 0;
+	padding: 0;
+}
+
+header nav ul li {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: .875em;
+	list-style: none; 
+	padding: 15px 10px; 
+}
+
+header nav ul li a{
+	color:#77a466;
+	text-decoration: none;
+}
+
+.top-section,
+.bottom-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+}
+
+.main-image {  /*third layer container for <img> tag */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.main-image img {
+	border-top: 3px solid #77a466;
+	border-bottom: 3px solid #77a466;
+	width: 90%;
+}
+
+.main-title {
+	width: 90%;
+}
+
+.main-title h2 {
+	text-align: left;
+	padding: 5px 0;
+	color: #77a466;
+	width: 100%;
+}
+
+.main-title p {
+	padding: 0;
+	font-size: 1em;
+	line-height: 25px;
+	width: 100%;
+}
+
+.section-one,
+.section-two,
+.section-three {
+	border-top: 1px solid #eee;
+	width: 90%;
+}
+
+.section-one h3 {
+	padding-top: 5px;
+	margin: 12px 0 12px 0;
+}
+
+.section-two h3,
+.section-three h3 {
+	padding-top: 5px; 
+	margin: 12px 0 12px 0;
+}
+
+.section-two p,
+.section-three p {
+	padding: 0;   
+}
+
+.menu {                     
+	list-style: none;
+	padding-left: 0;        
+	margin-top: 18px;
+}
+
+.menu li {
+	padding-bottom: 15px;               
+	color:#77a466;
+}
+
+.reviews {
+	color: #333;
+	font-size: 1em;
+	line-height: 21px;
+}
+
+.address {
+	font-size: 1em;
+	line-height: 24px;
+}
+
+footer {
+	border-top: 3px solid #eee;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	margin: 0 auto;
+	text-align: center;
+	width: 90%;
+}
+
+footer span {
+	font-family: 'Galada', cursive;
+	text-transform: lowercase;
+	color: #77a466;
+	font-size: .875em;
+}
+
+
+
+/******************************************************/
+/*******************  TABLET  *************************/
+/******************************************************/
+@media print {    
+	body {
+		background: none;
+	}
+	img {
+		display: none;
+	}
+}
+
+@media (min-width: 768px){
+	.bottom-section {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;  /* raises all to the top of y axis */
+		flex-flow: row wrap; 
+		width: 90%;
+	}
+	.bottom-section h3,
+	.bottom-section p {
+		padding-left: 15px;
+	}
+	.section-one ul {
+		padding-left: 15px;
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		border: 1px solid #eee;
+		border-bottom: none;
+		min-height: 200px; /*set this so all three divs were the same height*/
+		width: 33%; 
+	}
+	.main-image img {
+		border-top: 4px solid #77a466;
+		border-bottom: 4px solid #77a466;
+	}
+}
+
+
+
+/******************************************************/
+/*******************  DESKTOP *************************/
+/******************************************************/
+@media (min-width: 1200px){
+	header {
+		flex-flow: row nowrap; /*mobil set to column*/
+		width: 90%;
+	}
+	header h1 {
+		border-bottom: none;
+		justify-content: flex-start;
+		width: 100%;
+	}
+	header ul  {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+		flex-flow: row nowrap; 
+		width: 100%;
+	}
+	header nav ul li {
+		padding-top: 40px;
+	}
+}
