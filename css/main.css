@@ -62,7 +62,6 @@ header {
 }
 
 header h1 {
-	border-bottom: 3px solid #77a466;
 	padding: 38px 0 20px 0;
 	margin: 0;
 	text-align: center; 
@@ -71,6 +70,14 @@ header h1 {
 
 header h1 span {
 	color: #77a466;
+}
+
+hr {
+	width: 90%;
+	border: 0;
+	height: 2px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), 
+	rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 header nav {
@@ -167,7 +174,7 @@ header nav ul li a{
 }
 
 footer {
-	border-top: 3px solid #eee;
+	border-top: 2px solid #eee;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -184,8 +191,6 @@ footer span {
 	font-size: .875em;
 }
 
-
-
 /******************************************************/
 /*******************  TABLET  *************************/
 /******************************************************/
@@ -193,6 +198,7 @@ footer span {
 	body {
 		background: none;
 	}
+
 	img {
 		display: none;
 	}
@@ -200,24 +206,34 @@ footer span {
 
 @media (min-width: 768px){
 	.bottom-section {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
 		align-items: flex-start; 
 		flex-flow: row wrap; 
 	}
+
 	.bottom-section h3,
 	.bottom-section p {
 		padding: 0 15px;
 	}
+
 	.section-one ul {
 		padding-left: 15px;
 	}
+
 	.section-one,
 	.section-two,
 	.section-three {
-		border: 1px solid #eee;
 		border-bottom: none;
 		min-height: 220px; 
 		width: 33%; 
 	}
+
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+
 	.main-image img {
 		border-top: 4px solid #77a466;
 		border-bottom: 4px solid #77a466;
@@ -233,16 +249,23 @@ footer span {
 	header {
 		flex-flow: row nowrap;
 	}
+
+	hr {
+		display: none;
+	}
+
 	header h1 {
 		border-bottom: none;
 		text-align: left;
 	}
+
 	header ul  {
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-end;
 		flex-flow: row nowrap; 
 	}
+
 	header nav ul li {
 		padding-top: 40px;
 	}
